@@ -1,13 +1,27 @@
 import express from "express";
-import { getCursos, createCurso, updateCurso, deleteCurso } from "../controllers/cursosController.js";
+import {
+  crearCurso,
+  obtenerCursos,
+  obtenerCursoPorId,
+  actualizarCurso,
+  eliminarCurso,
+  obtenerCategorias,
+  obtenerSubcategorias,
+  obtenerDocentes
+} from "../controllers/cursoController.js";
 
 const router = express.Router();
 
-// Rutas CRUD
-router.get("/", getCursos);
-router.post("/add", createCurso);
-router.post("/update/:id", updateCurso);
-router.get("/delete/:id", deleteCurso);
+// CRUD principal
+router.post("/", crearCurso);
+router.get("/", obtenerCursos);
+router.get("/:id", obtenerCursoPorId);
+router.put("/:id", actualizarCurso);
+router.delete("/:id", eliminarCurso);
 
-// Exportación por defecto
+// Rutas auxiliares para selects
+router.get("/data/categorias", obtenerCategorias);
+router.get("/data/subcategorias", obtenerSubcategorias);
+router.get("/data/docentes", obtenerDocentes);
+
 export default router;

@@ -1,12 +1,8 @@
-//Acceso a los datos de .env
+import dotenv from "dotenv";
+import mysql from "mysql2/promise";
 
-//Acceder al archivo .env
-require("dotenv").config();
+dotenv.config();
 
-//Administrar la BD (promesa = proceso en curso...)
-const mysql = require("mysql2/promise");
-
-//Pool de conexiones = acceso
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -15,5 +11,4 @@ const pool = mysql.createPool({
   port: process.env.DB_PORT,
 });
 
-//Aprovechar el recurso en otra parte de la App
-module.exports = pool;
+export default pool;
