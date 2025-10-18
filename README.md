@@ -1,15 +1,23 @@
-# 🧩 Gestión de Cursos — CRUD con Node.js, Express y MySQL
+# 🧩 Gestión de Cursos — CRUD con Node.js, Express y MySQL 
+
 Aplicación web para gestionar cursos, docentes, categorías y subcategorías, desarrollada con Node.js, Express, MySQL y Bootstrap 5.
 Permite registrar, editar y eliminar cursos de forma dinámica, con alertas modernas gracias a SweetAlert2.
 ---
 
 # 🚀 Características principales
+
 ✅ CRUD completo de cursos (crear, leer, actualizar y eliminar).
+
 ✅ Carga dinámica de categorías, subcategorías y docentes desde la base de datos.
+
 ✅ Formularios y tablas responsivas con Bootstrap 5.
+
 ✅ Alertas, confirmaciones y notificaciones con SweetAlert2.
+
 ✅ Backend con rutas REST usando Express Router.
+
 ✅ Código limpio y modular con controladores y conexión MySQL separados.
+
 ---
 
 # 🧩 API REST disponible Método Ruta Descripción
@@ -88,9 +96,10 @@ Ejecutar el servidor
 ```
     nodemon server
 ```
-6.Abrir en el navegador
+Abrir en el navegador
 ```
     http://localhost:3000
+```
 ---
 
 # 💻 Uso
